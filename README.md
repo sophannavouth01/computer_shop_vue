@@ -141,7 +141,7 @@ and [discord server](https://discord.gg/jTKTjj2weV)
 
 ### Partners & Sponsors ❤️
 <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t1.6435-9/153643043_243260007449634_5969227804475788078_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=be3454&_nc_eui2=AeEZEyl7RJe-e0FgPwlGzQw0dLJhpGlcp710smGkaVynvRicU3-WJ5VRgGc9DRP-OoZ5AdTa3e7ApevzweZMxZWC&_nc_ohc=ISacZMhxTu4AX_KlWSC&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfAfFdfmJJe8Uz67scW0KBK2um_QN-ZxD-I3vYxd_07bRA&oe=65D98298" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="100px" height="100px" >
-
+<img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/385875208_337820312032356_5264101325129071449_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEMvlqCvslzMnAE0rIdSfX5UIVCHDSTHlNQhUIcNJMeU507cX5HjEpz6I5RNJOsWz6F7Ad7PQf47YeWSPtTSkev&_nc_ohc=sbHANGBB7qYAX94d7U_&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfBZsfA88NMkrIrOIZWqaGKNVugh2TCnosyFD61lEd59dw&oe=65B7875D" width="100px" height="100px" >
 
 <img src="https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="400px">
 
