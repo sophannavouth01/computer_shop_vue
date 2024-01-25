@@ -37,42 +37,11 @@ const routes: Array<RouteRecordRaw> = [
             },
           },
           {
-            name: 'category',
-            path: 'category',
-            component: () => import('../pages/admin/products/category/Category.vue'),
-            meta: {
-              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Progress-Bars',
-            },
-          },
-          {
-            name: 'brand',
-            path: 'brand',
-            component: () => import('../pages/admin/products/brand/Brand.vue'),
-            meta: {
-              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Progress-Bars',
-            },
-          },
-          {
-            name: 'add-brand',
-            path: 'add-brand',
-            component: () => import('../components/admin/AddBrand.vue'),
-          },
-          {
-            name: 'edit-brand',
-            path: 'edit-brand/:id',
-            component: () => import('../components/admin/EditBrand.vue'),
-          },
-          
-          {
             name: 'edit-product',
             path: 'edit-product/:id',
             component: () => import('../components/admin/EditProduct.vue'),
           },
-          {
-            name: 'add-category',
-            path: 'add-category',
-            component: () => import('../components/admin/AddCategory.vue'),
-          },
+          
         ],
       },
       {
@@ -159,26 +128,7 @@ const routes: Array<RouteRecordRaw> = [
 
         ],
       },
-      {
-        name: 'frontend',
-        path: 'frontend',
-        component: RouteViewComponent,
-        meta: { requiresAuth: true }, // Protect all child routes
-
-        children: [
-          {
-            name: 'home-frontend',
-            path: 'home-frontend',
-            component: () => import('../pages/admin/frontend/Frontend.vue'),
-          },
-          {
-            name: 'pos-record',
-            path: 'pos-record',
-            component: () => import('../pages/admin/records/pos-record/PosRecord.vue'),
-          },
-          
-        ],
-      },
+      
       UIRoute,
     ],
   },
@@ -196,11 +146,7 @@ const routes: Array<RouteRecordRaw> = [
         path: 'signup',
         component: () => import('../pages/auth/signup/Signup.vue'),
       },
-      {
-        name: 'recover-password',
-        path: 'recover-password',
-        component: () => import('../pages/auth/recover-password/RecoverPassword.vue'),
-      },
+     
       {
         path: '',
         redirect: { name: 'login' },
@@ -236,6 +182,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     name: 'cashier',
     path: '/cashier',
+    meta: { requiresAuth: true }, 
     component: AppLayoutCashier,
     children: [
       {

@@ -22,12 +22,8 @@
 			</div>
 			<div class=" mt-[70px] ">
 				<h1 class=" py-5 font-semibold">Description:</h1>
-				<div class="    w-[360px] ">
-					<ul class="pl-5  font-normal">
-						<li class="text-nowrap  py-3">{{ product.description }}</li>
-			
-
-					</ul>
+				<div class="w-[500px] ">		
+					<p class="leading-8   py-3">{{ product.description }}</p>
 				</div>
 			</div>
 		</div>
@@ -54,8 +50,7 @@
 								src="../../../../public/images/macbook/apple_macbook_air_13_core_i5_8th_gen_128gb_silver_mvfh2_.jpg"
 								alt="A girl Posing Image" />
 							<div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-								<button class="font-medium text-base leading-3 text-red-600 bg-white py-3 w-full">30%
-								</button>
+								
 								<button	class="bg-transparent font-medium text-base leading-3 border-2 border-white py-3 w-full mt-2 text-white">	View</button>
 							</div>
 						</div>
@@ -84,10 +79,8 @@
 								src="https://i.ebayimg.com/images/g/6tkAAOSwDJ1jdDnP/s-l1600.jpg"
 								alt="A girl wearing white suit and googgles" />
 							<div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-								<button class="font-medium text-base leading-4 text-gray-800 bg-white py-3 w-full">Add
-									to bag</button>
-								<button
-									class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">Quick
+								
+								<button	class="bg-transparent font-medium text-base leading-4 border-2 border-white py-3 w-full mt-2 text-white">
 									View</button>
 							</div>
 						</div>
@@ -113,8 +106,7 @@
 								src="../../../../public/images/macbook/MacBook_Pro_16-in_Space_Gray_PDP_Image_Position-1__MXLA.jpeg"
 								alt="A girl wearing dark blue suit and posing" />
 							<div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-								<button class="font-medium text-base leading-3 text-red-600 bg-white py-3 w-full">30%
-								</button>
+								
 								<button
 									class="bg-transparent font-medium text-base leading-3 border-2 border-white py-3 w-full mt-2 text-white">
 									View</button>
@@ -142,8 +134,7 @@
 								src="https://tshop.r10s.jp/geo-mobile/cabinet/3873/8593873-01.jpg?fitin=720%3A720"
 								alt="A girl posing and wearing white suit" />
 							<div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
-								<button class="font-medium text-base leading-3 text-red-600 bg-white py-3 w-full">30%
-								</button>
+								
 								<button
 									class="bg-transparent font-medium text-base leading-3 border-2 border-white py-3 w-full mt-2 text-white">
 									View</button>
