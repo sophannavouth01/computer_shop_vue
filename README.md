@@ -147,7 +147,7 @@ border-radius: ="100px" >
 border-radius: ="100px" >
 <img src="./public/2024-01-25 16.26.40.jpg" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="100px" height="100px" 
 border-radius: ="100px" >
-<img src="https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="200px"  height="100px" >
+<img src="https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="150px"  height="100px" >
 
 
 
