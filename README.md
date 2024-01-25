@@ -145,6 +145,8 @@ border-radius: ="100px" >
 <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/385875208_337820312032356_5264101325129071449_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEMvlqCvslzMnAE0rIdSfX5UIVCHDSTHlNQhUIcNJMeU507cX5HjEpz6I5RNJOsWz6F7Ad7PQf47YeWSPtTSkev&_nc_ohc=sbHANGBB7qYAX94d7U_&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfBZsfA88NMkrIrOIZWqaGKNVugh2TCnosyFD61lEd59dw&oe=65B7875D" width="100px" height="100px" >
 <img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/315042804_3178421875751889_6700309340831657854_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeFq-t4hxfvwkebkkEBzODcd5uYljiMokJnm5iWOIyiQmbouPKIEf8q2ksKj_eqS8Nq4kHpoSBKSwVdBD9hr1re6&_nc_ohc=scbblDzTN-sAX8un-uI&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfCbLqAx9iA3qpllpOHjxm4CQiZmm-hJB_sjM7hm_vjedg&oe=65B6F38A" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="100px" height="100px" 
 border-radius: ="100px" >
+<img src="./public/2024-01-25 16.26.40.jpg" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="100px" height="100px" 
+border-radius: ="100px" >
 <img src="https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="400px" >
 
 
