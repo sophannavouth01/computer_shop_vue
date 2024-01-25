@@ -151,9 +151,7 @@ and [discord server](https://discord.gg/jTKTjj2weV)
 
 ### Awards
 
-<a href="https://flatlogic.com/templates/vuestic-vue-free-admin" target="_blank">
-    <img src="https://i.imgur.com/ZeQPZ3Q.png" align="center" width="150px"/>
-</a>
+
 <p>
   By <a href="https://flatlogic.com/templates/vuestic-vue-free-admin" target="_blank">@flatlogic</a> marketplace
 </p>
