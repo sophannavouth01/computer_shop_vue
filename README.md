@@ -1,29 +1,20 @@
-<p align="center">
-  <a href="https://vuestic.dev" target="_blank">
-    <img alt="Vuestic UI Logo" width="500" src="./public/vuestic-admin-logo.png">
-  </a>
-</p>
 
 <p align="center">
-  Free and beautiful Vue.js admin template with 44+ custom UI components.</br>
-  Developed by  <a href="https://epicmax.co">Epicmax</a>.
-  Designed by <a href="#">Vasili Savitski</a>
+  Free and beautiful Vue.js admin template with Frontend custom UI components.</br>
+  Developed by  <a href="https://epicmax.co">Sophanna</a>.
+  Designed by <a href="#">HengSaNa</a>
 <br>
-Based on <a href="https://github.com/epicmaxco/vuestic-ui">Vuestic UI</a> library.
+Based on <a href="https://github.com/epicmaxco/vuestic-ui">Vue and Tailwind css</a> library.
 </p>
 
 <p align="center">
-  <a href="https://admin.vuestic.dev/admin/dashboard?theme=light"> Light theme demo </a> | <a href="https://admin.vuestic.dev/admin/dashboard?theme=semi-dark">Semi-dark theme demo </a> | <a href="https://admin.vuestic.dev/admin/dashboard?theme=original">Original theme demo </a> | <a href="https://vuestic.dev"> Vuestic UI documentation </a>
+  <a href=""> Sophanna </a> | <a href="">Muyheng </a> | <a href="">Reaksa</a> |<a href=""> Sunheng<a>
 </p>
 
-> Vuestic Admin is built with Vuestic UI. See our
-> <a href="https://github.com/epicmaxco/vuestic-ui/issues">issues</a>,
-> <a href="https://vuestic.dev/en/contribution/guide">contributing guide</a> and join discussions on our
-> <a href="https://discord.gg/jTKTjj2weV">discord server</a> to help us improve Vuestic Admin & Vuestic UI experience.
 
 <p align="center">
-  <a href="https://admin.vuestic.dev" target="_blank">
-    <img src="./public/vuestic-admin-image.jpg" align="center" width="888px"/>
+  <a href="" target="_blank">
+    <img src="./public/2024-01-25 16.01.57.jpg" align="center" width="888px"/>
   </a>
 </p>
 
@@ -57,10 +48,10 @@ Vuestic Admin:
 
 ```
 # clone the repo
-$ git clone https://github.com/epicmaxco/vuestic-admin.git myproject
+$ git clone https://github.com/sophannavouth01/computer_shop_vue.git myproject
 
 # go into app's directory and install dependencies:
-$ cd myproject
+$ cd computer_shop_vue
 
 ```
 
@@ -135,8 +126,11 @@ $ yarn build --report
 
 We design Vuestic Admin to support the latest modern web browsers.
 
-| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="Edge" width="24px" height="24px" /><br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /><br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /><br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /><br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" /><br>Opera |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 
+<img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t1.6435-9/153643043_243260007449634_5969227804475788078_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=be3454&_nc_eui2=AeEZEyl7RJe-e0FgPwlGzQw0dLJhpGlcp710smGkaVynvRicU3-WJ5VRgGc9DRP-OoZ5AdTa3e7ApevzweZMxZWC&_nc_ohc=ISacZMhxTu4AX_KlWSC&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfAfFdfmJJe8Uz67scW0KBK2um_QN-ZxD-I3vYxd_07bRA&oe=65D98298" alt="Edge" width="24px" height="24px" /><br>Edge | 
+<img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/385875208_337820312032356_5264101325129071449_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=efb6e6&_nc_eui2=AeEMvlqCvslzMnAE0rIdSfX5UIVCHDSTHlNQhUIcNJMeU507cX5HjEpz6I5RNJOsWz6F7Ad7PQf47YeWSPtTSkev&_nc_ohc=sbHANGBB7qYAX94d7U_&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfBZsfA88NMkrIrOIZWqaGKNVugh2TCnosyFD61lEd59dw&oe=65B7875D" alt="Firefox" width="24px" height="24px" /><br>Firefox | 
+<img src="https://scontent.fpnh24-1.fna.fbcdn.net/v/t39.30808-6/315042804_3178421875751889_6700309340831657854_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd5e9f&_nc_eui2=AeFq-t4hxfvwkebkkEBzODcd5uYljiMokJnm5iWOIyiQmbouPKIEf8q2ksKj_eqS8Nq4kHpoSBKSwVdBD9hr1re6&_nc_ohc=scbblDzTN-sAX8un-uI&_nc_ht=scontent.fpnh24-1.fna&oh=00_AfCbLqAx9iA3qpllpOHjxm4CQiZmm-hJB_sjM7hm_vjedg&oe=65B6F38A" alt="Chrome" width="24px" height="24px" /><br>Chrome | 
+------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Edge                                                                                                                                             | last 2 versions                                                                                                                                              | last 2 versions                                                                                                                                          | last 2 versions                                                                                                                                          | last 2 versions                                                                                                                                      |
 
 ### Contributing
@@ -156,21 +150,13 @@ and [discord server](https://discord.gg/jTKTjj2weV)
 
 ### Partners & Sponsors ❤️
 
-<img src="./.github/assets/sponsors.jpg" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="400px">
+<img src="https://neurosciencenews.com/files/2023/06/coffee-brain-caffeine-neuroscincces.jpg" loading="lazy" alt="Epicmax, vuejobs, ag-grid, flatlogic, browserstack and jetbrains" width="400px">
 
-Become a partner: [hello@epicmax.co](mailto:hello@epicmax.co)
+
 
 ## Can I hire you guys?
 
-[Epicmax](https://epicmax.co) is committed to Open Source from its beginning.
-[Vuestic UI](https://vuestic.dev) was created and backed by Epicmax, and is supported through all the years.
-You can request a consultation or order web development services by Epicmax via this [form](https://epicmax.co/contacts) 😎
 
-Say hi: <a href="mailto:hello@epicmax.co">hello@epicmax.co</a>. We will be happy to work with you!
-
-[Other work](https://epicmax.co) we’ve done 🤘
-
-[Meet the Team](https://vuestic.dev/team)
 
 ### Awards
 

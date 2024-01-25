@@ -60,12 +60,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'add-product',
             component: () => import('../components/admin/AddProduct.vue'),
           },
-          {
-            name: 'edit-entry',
-            path: 'edit-entry/:id',
-            component: () => import('../components/admin/EditStockIn.vue'),
-
-          },
+         
           {
             name: 'stock-adjustment',
             path: 'stock-adjustment',
@@ -75,18 +70,7 @@ const routes: Array<RouteRecordRaw> = [
         ],
       },
 
-      {
-        name: 'supplier',
-        path: 'supplier',
-        component: RouteViewComponent,
-        children: [
-          {
-            name: 'store',
-            path: 'store',
-            component: () => import('../pages/admin/supplier/store/Store.vue'),
-          },
-        ],
-      },
+      
       {
         name: 'records',
         path: 'records',
@@ -120,11 +104,7 @@ const routes: Array<RouteRecordRaw> = [
             path: 'edit-user/:id',
             component: () => import('../components/admin/EditUser.vue'),
           },
-          {
-            name: 'profile',
-            path: 'profile',
-            component: () => import('../pages/admin/settings/profile-user/Profile.vue')
-          },
+          
 
         ],
       },
@@ -153,32 +133,7 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
-  {
-    path: '/404',
-    component: Page404Layout,
-    children: [
-      {
-        name: 'not-found-advanced',
-        path: 'not-found-advanced',
-        component: () => import('../pages/404-pages/VaPageNotFoundSearch.vue'),
-      },
-      {
-        name: 'not-found-simple',
-        path: 'not-found-simple',
-        component: () => import('../pages/404-pages/VaPageNotFoundSimple.vue'),
-      },
-      {
-        name: 'not-found-custom',
-        path: 'not-found-custom',
-        component: () => import('../pages/404-pages/VaPageNotFoundCustom.vue'),
-      },
-      {
-        name: 'not-found-large-text',
-        path: '/pages/not-found-large-text',
-        component: () => import('../pages/404-pages/VaPageNotFoundLargeText.vue'),
-      },
-    ],
-  },
+  
   {
     name: 'cashier',
     path: '/cashier',
