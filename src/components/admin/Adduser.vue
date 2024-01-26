@@ -5,7 +5,7 @@
 				<!-- Left Side -->
 				<div class="w-full md:w-6/12 md:mx-2">
 					<div class="bg-white ">
-						<img src="https://www3.recruiter.com/recruiting/wp-content/uploads/2022/04/Clever-ways-to-source-tech-talent.jpg"
+						<img src="https://blog.djolt.co/hubfs/hubspot-automation-workflows%5B1%5D.png"
 							alt="">
 					</div>
 				</div>

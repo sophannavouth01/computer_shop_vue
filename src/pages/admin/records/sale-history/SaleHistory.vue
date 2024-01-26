@@ -17,16 +17,17 @@
             <th scope="col" class="px-6 py-3">
               Payment Method
             </th>
-            <th scope="col" class="px-6 py-3">
-              Cashier ID     
-            </th>
+           
            
             <th scope="col" class="px-6 py-3">
                  Address
             </th>
 
-            <th scope="col" class="px-6 py-3  text-center">
-              Description
+            <th scope="col" class="px-6 py-3  ">
+              Phone Number
+            </th>
+            <th scope="col" class="px-6 py-3">
+              Cashier ID     
             </th>
           </tr>
       </thead>
@@ -42,20 +43,21 @@
             </th>
             
             <td class="px-6 py-4">
-              $ <span class=" text-blue-700">{{ product.amount }}</span>
+              <span class=" text-red-500">{{ product.amount }} <span class=" px-1  text-blue-600">$</span></span>
             </td>
             <td class="px-6 py-4"> 
               {{ product.payment_method }}
             </td>
-            <td class="px-6 py-4">
-              {{ product.user_id }}
-            </td>
+           
            
             <td class="px-6 py-4">
               {{ product.address}}
             </td>
             <td class="px-6 py-4">
               {{product.phone_number }}
+            </td>
+            <td class="px-6 py-4">
+              {{ product.user_id }}
             </td>
         </tr>
 

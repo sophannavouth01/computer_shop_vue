@@ -4,9 +4,8 @@
 			<div class="md:flex no-wrap md:-mx-2">
 				<!-- Left Side: Image Preview -->
 				<div class="w-full md:w-6/12 md:mx-2">
-					<div v-for="p  in this.Product" :key="p.id" class="bg-white">
-						<img class="h-[450px] w-full"
-						v-if="p.image" :src="getImageUrl(p.image)" alt="Product Image">
+					<div class="bg-white">
+						<img class="h-[450px] w-full" v-if="Product.image" :src="getImageUrl(Product.image)" alt="Product Image">
 					</div>
 				</div>
 				<!-- Right Side: Form for Editing Product -->
@@ -132,20 +131,20 @@ export default {
 	},
 	methods: {
 		getProductByID() {
-			axios.get(`http://127.0.0.1:8000/api/auth/products/${this.id}`)
-				.then((res) => {
-					// Populate the form fields with the fetched data
-					Object.assign(this.Product, res.data);
-				})
-				.catch((error) => {
-					console.error(error);
-				});
-		},
-		getImageUrl(relativePath) {
-			// Correct base URL for images
-			const baseUrl = 'http://127.0.0.1:8000/storage/';
-			return baseUrl + relativePath;
-		},
+        axios.get(`http://127.0.0.1:8000/api/auth/products/${this.id}`)
+            .then((res) => {
+                // Populate the form fields with the fetched data
+                Object.assign(this.Product, res.data);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+        },
+        getImageUrl(relativePath) {
+          // Correct base URL for images
+          const baseUrl = 'http://127.0.0.1:8000/storage/';
+          return baseUrl + relativePath;
+        },
 		editProduct() {
 			const formData = new FormData();
 			// Append product details to formData

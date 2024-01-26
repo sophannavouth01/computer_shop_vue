@@ -810,17 +810,14 @@ export default {
       dropdownPopoverShow: false,
     }
   },
-
   mounted() {
     this.fetchDataFromApi();
     this.fetchItemsFromAPI();
   },
   methods: {
-
     toggleTabs(tabNumber) {
       this.openTab = tabNumber;
     },
-
     fetchDataFromApi() {
       const apiUrl = 'http://127.0.0.1:8000/api/auth/products';
       axios.get(apiUrl)
@@ -853,7 +850,6 @@ export default {
     emptyCart() {
       this.cart = [];
     },
-
     addToCart(item) {
 
       const orderItem = {
@@ -879,14 +875,12 @@ export default {
           console.error('Error adding order:', error);
         });
     },
-
     addToCartMore(detail) {
       detail.qty += 1;
       detail.total_price = detail.qty * detail.price;
       // Optionally update the server
       this.updateOrderDetailOnServer(detail);
     },
-
     updateOrderDetailOnServer(detail) {
       const orderdetail = {
         product_id: detail.product_id, // Changed from detail.id to detail.product_id
@@ -950,15 +944,10 @@ export default {
           console.error('Error removing item from order:', error);
         });
     },
-
-
-
     logout() {
       localStorage.removeItem('token');
       this.$router.push('/login'); // Redirect to login page
     },
-
-
   },
   computed: {
     filteredOrders() {

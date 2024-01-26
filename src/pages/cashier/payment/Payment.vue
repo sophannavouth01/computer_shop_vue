@@ -46,7 +46,7 @@
 										  <button class=" text-md leading-3   text-red-600 ">remove</button>
 										</div>
 										<div class="py-2 px-1  mb-2  mr-6 focus:outline-none">
-											<button @click="removeItemOneOrder(order.id, detail.product_id)"
+											<button @click="removeItemOneOrder(order.id, detail.product_id)" :disabled="detail.qty === 1"
 												class="px-2 py-1 mx-3 bg-rose-600  text-white">-</button>
 											x {{ detail.qty }}
 											<button @click="addToCartMore(detail)"
@@ -90,17 +90,13 @@
 							<div>
 								<p class="lg:text-2xl text-3xl font-black leading-9 capitalize   text-blue-900">The way
 									Payment & summary Total</p>
-								<div class="flex items-center justify-between pt-10">
-									<p class="text-base leading-none text-gray-400">Cashier: </p>
-									<input type="text" class="border-b-2 border-cyan-500 bg-gray-100">
-								</div>
+								
 								<div class="flex items-center justify-between pt-5">
 									<p class="text-base leading-none text-gray-400"> ID:</p>
 									<input type="text" v-model="paymentData.user_id"
 										class="border-b-2 border-cyan-500 bg-gray-100">
 								</div>
-								<br class=" w-full  h-[2px]">
-
+							
 								<div class="flex items-center justify-between pt-5">
 									<p class="text-md leading-none text-gray-800">Total Amount:</p>
 									<input type="text" v-model="paymentData.amount"
@@ -329,6 +325,11 @@ export default {
 </script>
 
 <style>
+button[disabled] {
+  /* Style for disabled button */
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 /* width */
 
 #scroll::-webkit-scrollbar {
