@@ -41,7 +41,7 @@
 								</div>
 								<!-- Quantity Input -->
 								<div class="flex flex-col md:ml-3 md:mt-0 mt-8">
-									<input type="number"
+						 			<input type="number"
 										class="w-64 text-sm font-medium leading-none text-gray-800 p-3 border-b-2"
 										placeholder="Quantity" v-model.number="Product.qty" />
 								</div>

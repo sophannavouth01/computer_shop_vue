@@ -81,7 +81,11 @@ const routes: Array<RouteRecordRaw> = [
             path: 'sale-history',
             component: () => import('../pages/admin/records/sale-history/SaleHistory.vue'),
           },
-          
+          {
+            name: 'detail-payment',
+            path: 'detail-payment/:id',
+            component: () => import('../components/admin/DetailPayment.vue'),
+          },
         ],
       },
       {

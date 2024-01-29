@@ -27,7 +27,10 @@
               Phone Number
             </th>
             <th scope="col" class="px-6 py-3">
-              Cashier ID     
+              Cashier 
+            </th>
+            <th scope="col" class="px-6 py-3">
+              Details
             </th>
           </tr>
       </thead>
@@ -58,6 +61,12 @@
             </td>
             <td class="px-6 py-4">
               {{ product.user_id }}
+            </td>
+           
+            <td class="px-6 py-4">
+              <button @click="this.$router.push(`detail-payment/${product.id}`)" >
+                  <i class="fa-solid fa-user-check  text-green-500  hover:text-white"></i>
+              </button>
             </td>
         </tr>
 

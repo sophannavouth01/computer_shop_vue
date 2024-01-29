@@ -1,7 +1,7 @@
 <template>
 	<div class=" container ">
 		<!-- banner 1 -->
-		<div>
+		<div  >
 			<img src="../../../../public/images/asus/fwebp.png" alt="" class=" object-cover">
 		</div>
 		<!-- cart 1 -->

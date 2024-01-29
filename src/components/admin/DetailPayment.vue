@@ -1,29 +1,70 @@
 <template>
 	<body class="bg-gray-100 overflow-y-hidden" style="height: 700px">
-		<div class="w-full h-full  bg-opacity-90 top-0 overflow-y-auto overflow-x-hidden fixed sticky-0" id="chec-div">
-			<div class="w-full absolute z-10 right-0 h-full overflow-x-hidden transform translate-x-0 transition ease-in-out duration-700"
-				id="checkout">
+		<div class="w-full h-full  bg-opacity-90  overflow-y-auto overflow-x-hidden " id="">
+			<div class="w-full   h-full overflow-x-hidden ">
 				<div class="flex items-end lg:flex-row flex-col justify-end" id="cart">
-					<div class="lg:w-2/2 md:w-10/12 w-full lg:px-8 lg:py-14 md:px-6 px-4 md:py-8 py-4 bg-white overflow-y-auto overflow-x-hidden lg:h-screen h-auto"
-						id="scroll">
-						<div class="flex items-center text-gray-500 hover:text-gray-600 cursor-pointer">
-							<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left"
-								width="16" height="16" stroke="currentColor" fill="none" stroke-linecap="round"
-								stroke-linejoin="round">
-								<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-								<polyline points="15 6 9 12 15 18" />
-							</svg>
-							<router-link to="pos-order">
-								<p class="text-sm pl-2 leading-none py-3">Back</p>
-							</router-link>
+					
+					<div class=" bg-white    h-full">
+
+						<div class="flex flex-col lg:h-screen h-auto  md:px-5  py-2 justify-between ">
+							<div>
+						
+								<div class="flex items-center justify-between ">
+									<p class="text-base leading-none text-gray-400"> ID:</p>
+									<input type="text" 	class="border-b-2 border-cyan-500 bg-gray-100">
+								</div>
+								<br class=" w-full  h-[2px]">
+
+								<div class="flex items-center justify-between pt-2">
+									<p class="text-md leading-none text-gray-800 ">Total Amount:</p>
+									<input type="text" 
+										class="border-b-2 border-cyan-500 bg-gray-100">
+								</div>
+								<div class="flex items-center justify-between pt-5">
+									<p class="text-md leading-none text-gray-800">Order ID:</p>
+									<input type="text" 
+										class="border-b-2 border-cyan-500 bg-gray-100">
+								</div>
+								<div class="flex items-center justify-between pt-5 ">
+									<p class="text-base leading-none text-gray-800">Payment Method</p>
+									<input type="text" 
+										class="border-b-2 border-cyan-500 bg-gray-100">
+								</div>
+								<div class="flex items-center justify-between pt-5">
+									<p class="text-base leading-none text-gray-800">Transection ID:</p>
+									<input  type="text"
+										class="border-b-2 border-cyan-500 bg-gray-100">
+								</div>
+								<div class="flex items-center justify-between pt-5 ">
+									<p class="text-base leading-none text-gray-800">Cunstomer Name:</p>
+									<input  type="text"
+										class="border-b-2 border-cyan-500 bg-gray-100">
+								</div>
+								<div class="flex items-center justify-between pt-5 ">
+									<p class="text-base leading-none text-gray-800">Address:</p>
+									<input  type="text"
+										class="border-b-2 border-cyan-500 bg-gray-100">
+								</div>
+								<div class="flex items-center justify-between pt-5 ">
+									<p class="text-base leading-none text-gray-800">Phone Number:</p>
+									<input  type="text"
+										class="border-b-2 border-cyan-500 bg-gray-100">
+								</div>
+								
+							</div>
+							<div>
+								<button class="text-base leading-none w-full py-5   hover:bg-blue-600 bg-blue-500 border-white border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">Back</button>
+							</div>
 						</div>
-						<!-- <p class="lg:text-4xl text-3xl font-black leading-10 text-gray-800 pt-3">Summary Order</p> -->
-						<div v-for="order in filteredOrdersCart" :key="order.id">
-							<div v-for="detail in order.order_details" :key="detail.id"
-								class="md:flex items-stretch  md:pt-2  border-b  border-gray-300">
+
+						
+					</div>
+					<div class="lg:w-2/2 md:w-10/12 w-full lg:px-8 lg:py-14 md:px-6 px-4 md:py-8 py-4 bg-white overflow-y-auto overflow-x-hidden lg:h-screen h-auto">
+						<div >
+							<div 	class="md:flex items-stretch  md:pt-2  border-b  border-gray-300">
 								<div class="md:w-4/12 2xl:w-1/4 w-full">
 									<!-- Product Image -->
-									<img :src="getImageUrl(detail.product.image)" alt="Product Image"
+									<img  src="http://127.0.0.1:8000/storage/products/jqOzeyIkMmLclAykF5pJkPmlRaPvHlz4kjdyoW8m.jpg" alt=""
 										class="w-[120px] h-[120px] object-center object-cover md:block hidden" />
 								</div>
 								<div class="md:pl-3 md:w-8/12 2xl:w-3/4 flex flex-col justify-center">
@@ -33,124 +74,26 @@
 										</p>
 										<div class=" px-1 mr-6 focus:outline-none text-base font-black">
 											<!-- Total Quantity -->
-											Total Quantity: <span class="text-blue-600 pl-2"> {{ detail.qty }} pcs</span>
+											Total Quantity: <span class="text-blue-600 pl-2">  pcs</span>
 										</div>
 									</div>
 									<!-- Product Details -->
-									<p class="text-xl leading-3 font-semibold text-gray-600 "> {{ detail.product.pname }}
+									<p class="text-xl leading-3 font-semibold text-gray-600 "> 
 									</p>
-									<p class="text-md leading-3 text-gray-600 py-4">Color: {{ detail.product.color }}</p>
-									<p class="text-md leading-3 text-gray-600 ">Price : $ {{ detail.product.price }}</p>
+									<p class="text-md leading-3 text-gray-600 py-4">Color: </p>
+									<p class="text-md leading-3 text-gray-600 ">Price : $ </p>
 
 									<div class="flex items-center justify-between pt-2">
-										<div @click="removeItemFromOrder(order.id, detail.product_id)"
-											class="py-2 px-1 border mb-2 mt-2  border-gray-200 mr-6 focus:outline-none">
-											<button class=" text-md leading-3   text-red-600 ">remove</button>
-										</div>
-										<div class="py-2 px-1  mb-2  mr-6 focus:outline-none">
-											<button @click="removeItemOneOrder(order.id, detail.product_id)"  :disabled="detail.qty === 1"
-												class="px-2 py-1 mx-3 bg-rose-600  text-white">-</button>
-											x {{ detail.qty }}
-											<button @click="addToCartMore(detail)"
-												class=" px-2 mx-3 py-1 bg-blue-600 text-white">+</button>
-
-										</div>
+										
 										<!-- Total Price for the Product -->
 										<p class="text-base font-black leading-none  pb-3 text-gray-800">Total Price
-											<span class="text-green-500 px-4">${{ detail.total_price }}</span>
+											<span class="text-green-500 px-4">$</span>
 										</p>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="  w-full ">
-
-							<div v-for="order in filteredOrdersCart" :key="order.id">
-
-								<div class="flex  justify-end   pt-5">
-									<p class="text-xl leading-none text-gray-800">Order ID:</p>
-									<p class="text-xl leading-none px-3 text-blue-800">{{ order.id }}</p>
-								</div>
-								<div class="flex  justify-end   pt-5">
-									<p class="text-xl leading-none text-gray-800">Sub Quantity: </p>
-									<p class="text-xl leading-none px-3 text-blue-800">{{ order.total_qty }} pcs</p>
-								</div>
-								<div class="flex  justify-end  pt-5">
-									<p class="text-xl leading-none text-gray-800">Total Amount:</p>
-									<p class="text-xl leading-none px-3 text-blue-800">${{ order.total_amount }}</p>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-					<div class="lg:w-[550px] md:w-12/12 w-full bg-gray-100 h-full">
-
-						<div
-							class="flex flex-col lg:h-screen h-auto lg:px-8 md:px-5 px-4 lg:py-10 md:py-10 py-6 justify-between overflow-y-auto">
-							<div>
-								<p class="lg:text-2xl text-3xl font-black leading-9 capitalize   text-blue-900">The way
-									Payment & summary Total</p>
-
-								<div class="flex items-center justify-between pt-5">
-									<p class="text-base leading-none text-gray-400"> ID:</p>
-									<input type="text" v-model="paymentData.user_id" 
-										class="border-b-2 border-cyan-500 bg-gray-100">
-								</div>
-								<br class=" w-full  h-[2px]">
-
-								<div class="flex items-center justify-between pt-5">
-									<p class="text-md leading-none text-gray-800">Total Amount:</p>
-									<input type="text" v-model="paymentData.amount"
-										class="border-b-2 border-cyan-500 bg-gray-100">
-								</div>
-								<div class="flex items-center justify-between pt-5">
-									<p class="text-md leading-none text-gray-800">Order ID:</p>
-									<input type="text" v-model="paymentData.order_id"
-										class="border-b-2 border-cyan-500 bg-gray-100">
-								</div>
-								<div class="flex items-center justify-between pt-5 ">
-									<p class="text-base leading-none text-gray-800">Payment Method</p>
-									<select v-model="paymentData.paymentMethod"
-										class="text-base leading-none text-gray-800 bg-gray-100">
-										<option value="" disabled> Select Payment</option>
-										<option value="cash">Cash</option>
-										<option value="credit_card">Credit Card</option>
-									</select>
-								</div>
-								<div class="flex items-center justify-between pt-5">
-									<p class="text-base leading-none text-gray-800">Transection ID:</p>
-									<input v-model="paymentData.transactionId" type="text"
-										class="border-b-2 border-cyan-500 bg-gray-100">
-								</div>
-								<div class="flex items-center justify-between pt-5 ">
-									<p class="text-base leading-none text-gray-800">Cunstomer Name:</p>
-									<input v-model="paymentData.customerName" type="text"
-										class="border-b-2 border-cyan-500 bg-gray-100">
-								</div>
-								<div class="flex items-center justify-between pt-5 ">
-									<p class="text-base leading-none text-gray-800">Address:</p>
-									<input v-model="paymentData.address" type="text"
-										class="border-b-2 border-cyan-500 bg-gray-100">
-								</div>
-								<div class="flex items-center justify-between pt-5 ">
-									<p class="text-base leading-none text-gray-800">Phone Number:</p>
-									<input v-model="paymentData.phoneNumber" type="text"
-										class="border-b-2 border-cyan-500 bg-gray-100">
-								</div>
-								<div class="flex items-center justify-end pt-5 px-5">
-									<img src="../../../../public/images/QR.jpg" alt="" class=" w-[120px] h-[120px]">
-								</div>
-							</div>
-							<div>
-
-								<button @click="processPayment"
-									class="text-base leading-none w-full py-5   hover:bg-blue-600 bg-green-500 border-white border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">Payment <i class="fa-solid fa-receipt text-xl  text-white pl-3"></i></button>
-							</div>
-						</div>
-
-						
 					</div>
 				</div>
 			</div>
