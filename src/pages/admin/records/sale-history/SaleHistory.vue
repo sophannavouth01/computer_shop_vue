@@ -30,7 +30,7 @@
               Cashier 
             </th>
             <th scope="col" class="px-6 py-3">
-              Details
+              Done
             </th>
           </tr>
       </thead>
@@ -64,9 +64,9 @@
             </td>
            
             <td class="px-6 py-4">
-              <button @click="this.$router.push(`detail-payment/${product.id}`)" >
+             
                   <i class="fa-solid fa-user-check  text-green-500  hover:text-white"></i>
-              </button>
+              
             </td>
         </tr>
 
