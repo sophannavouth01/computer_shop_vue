@@ -6,14 +6,24 @@
         <div class="2xl:mx-auto 2xl:container py-2   md:px-6 ">
           <div class="w-full flex flex-col  ">
             <div class="flex flex-row    justify-center items-center text-center ">
-              <div class=" w-[500px] border-spacing-1 rounded-xl h-10 bg-gray-200">
-                <p class=" pt-2">Search Product<i class="fa-solid fa-magnifying-glass px-4 pt-1 text-slate-400"></i></p>
+              <div class="relative w-80">
+                <input type="text" placeholder="Search (Press  &quot;/&quot; to focus)"
+                  class="bg-background-form border border-gray-500 rounded-full px-4 pl-10 py-2 outline-none focus:border-blue-500 w-80">
+                <div class="absolute top-0 ml-3" style="top:10px">
+                  <svg fill="currentColor" class="text-gray-500 h-5 w-5" viewBox="0 0 24 24" width="24" height="24">
+                    <path class="heroicon-ui"
+                      d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z">
+                    </path>
+                  </svg>
+                </div>
+
               </div>
               <router-link to="pos-order-payment">
-                <button  class="text-base leading-none px-5 py-3   hover:bg-blue-600 hover:text-white  rounded-md   m-3 bg-blue-200 border-blue-100 border ml-[50px] text-black">
-                   Payment <i class="fa-solid fa-bag-shopping px-3   text-green-500  text-xl "></i>
+                <button
+                  class="text-base leading-none px-5 py-3   hover:bg-blue-600 hover:text-white  rounded-md   m-3 bg-blue-200 border-blue-100 border ml-[50px] text-black">
+                  Payment <i class="fa-solid fa-bag-shopping px-3   text-green-500  text-xl "></i>
                 </button>
-              
+
               </router-link>
               <button @click="logout" class="   px-2 bg-blue-700 text-white  py-2 rounded-sm  ml-[100px]">logout</button>
             </div>

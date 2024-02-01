@@ -14,22 +14,29 @@
         <div class="p-2 md:px-6 md:py-9  py-3">
           <div class="grid justify-items-end  pr-5">
             <div class=" flex  bg-white px-3 py-2   rounded-3xl">
-              <div class=" bg-gray-100 rounded-2xl p-[2px] h-[30px] ">
-                <input type="text" name="" id="" class="bg-gray-100  w-[170px] mx-2  h-6 ">
-                <i class="fa-solid fa-magnifying-glass  text-gray-800 pr-2 py-1"></i>
+              <div class="relative w-80">
+                <input type="text" placeholder="Search "  class="bg-background-form border border-gray-500 rounded-full px-4 pl-10 py-2 outline-none focus:border-blue-500 w-80">
+                <div class="absolute top-0 ml-3" style="top:10px">
+                  <svg fill="currentColor" class="text-gray-500 h-5 w-5" viewBox="0 0 24 24" width="24" height="24">
+                    <path class="heroicon-ui"
+                      d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z">
+                    </path>
+                  </svg>
+                </div>
               </div>
               <i class="fa-solid fa-bell   pt-2 ml-4"></i>
               <i class="fa-solid fa-moon pt-2 ml-4"></i>
               <i class="fa-solid fa-circle-info pt-2 ml-4"></i>
-              <img @click="toggleDropdown" src="https://cdn-icons-png.flaticon.com/512/2919/2919906.png" alt="" class="w-[30px] h-[30px] ml-4 rounded-full cursor-pointer" >
-               
+              <img @click="toggleDropdown" src="https://cdn-icons-png.flaticon.com/512/2919/2919906.png" alt=""
+                class="w-[30px] h-[30px] ml-4 rounded-full cursor-pointer">
+
             </div>
             <div v-if="showDropdown" class="dropdown-menu mt-12">
               <button @click="logout" class=" bg-slate-200 shadow-md rounded-md text-black  p-3">Log out</button>
 
             </div>
           </div>
-           
+
         </div>
         <div class=" md:px-6  ">
           <router-view />
@@ -161,6 +168,7 @@ $tabletBreakPointPX: 768px;
 
   }
 }
+
 .dropdown-menu {
   position: absolute;
   background-color: #f9f9f9;
