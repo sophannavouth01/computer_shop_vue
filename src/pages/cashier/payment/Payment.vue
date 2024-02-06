@@ -188,7 +188,7 @@ export default {
 			const apiUrl = 'http://127.0.0.1:8000/api/auth/orders';
 			axios.get(apiUrl)
 				.then((response) => {
-					this.orderid = response.data.data;
+					this.orderid = response.data;
 					console.log(this.orderid)
 				})
 				.catch((error) => {
@@ -199,8 +199,8 @@ export default {
 			const apiUrl = 'http://127.0.0.1:8000/api/auth/orders';
 			axios.get(apiUrl)
 				.then((response) => {
-					if (response.data.data && response.data.data.length > 0) {
-						this.orders = response.data.data;
+					if (response.data && response.data.length > 0) {
+						this.orders = response.data;
 					} else {
 						console.log('No orders found');
 						this.emptyCart();
@@ -313,12 +313,7 @@ export default {
 		this.getOrderId();
 	},
 	computed: {
-		filteredOrders() {
-			const currentUserID = parseInt(localStorage.getItem('user_id'), 10);
-			// Filter orders by status and user_id
-			return this.orders.filter(order =>
-				order.status === 'pending' && parseInt(order.user_id, 10) === currentUserID);
-		},
+		
 		filteredOrdersCart() {
 			const currentUserID = parseInt(localStorage.getItem('user_id'), 10);
 			// Filter orders by status and user_id
