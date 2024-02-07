@@ -732,83 +732,14 @@
         </div>
 
       </div>
-      <!-- right -->
-      <!-- <div class=" ">
-        <div class="bg-gray-100 ">
-          <div class="w-full h-full  bg-opacity-90 top-0  fixed sticky-0">
-            <div class="  mt-2   w-[250px] h-[50px] ">
-              <div>
-                <div class="relative   align-middle w-full flex    ">
-                  
-                    <button @click="logout" class=" px-2 bg-blue-700 text-white  py-2 rounded-sm ">logout</button>
-                 
-                </div>
-              </div>       
-            </div>
-           <div  class="w-full  z-10 right-0 h-full overflow-x-hidden ">
-              <div class="flex items-end lg:flex-row flex-col justify-end">
 
-                <div class="  w-full   md:pt-3 pt-4   ">
-                 
-                  <p   class="lg:text-2xl text-2xl  font-extralight leading-10 bg-blue-500 text-white py-1.5 px-1.5 rounded"> ORDER </p>
-                  <div class="alert alert-success alert-dismissible fade show" role="alert">
-                  </div>
-                  <div v-for="order in filteredOrdersCart" :key="order.id">
-                    <div v-for="detail in order.order_details" :key="detail.id"
-                      class="md:flex items-strech pt-5 md:pt-5  pb-5 lg:pt-5 border-t border-gray-50">
-                      <div class="  2xl:w-1/4 w-[100px] mr-3 ml-2  ">
-                        <img :src="getImageUrl(detail.product.image)" alt="Product Image"
-                          class="h-[100px] w-[100px] object-center object-cover md:block hidden " />
-                      </div>
-                      <div class="flex flex-col ">
-                        <div class="flex items-center  w-full   ">
-                          <p class="text-base w-[200px]  font-black leading-none  text-gray-800"></p>
-                          <button @click="removeItemOneOrder(order.id, detail.product_id)"
-                            class="px-2 py-1 mx-3 bg-rose-600  text-white">-</button>
-                          x {{ detail.qty }}
-                          <button @click="addToCartMore(detail)" class=" px-2 mx-3 py-1 bg-blue-600 text-white">+</button>
-                        </div>
-                        <p class="text-xs  text-gray-600 ">Type: {{ detail.product.category }}</p>
-                        <p class="text-xs leading-3 text-gray-600 py-1">Color: {{ detail.product.color }} </p>
-                        <div class=" flex ">
-                          <button @click="removeItemFromOrder(order.id, detail.product_id)"
-                            class="text-xs leading-3 underline text-red-500  cursor-pointer">Remove</button>
-                          <p class="text-base  pl-[170px] font-black leading-none text-blue-800">$ {{ detail.total_price
-                          }}
-                          </p>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-                  <div class="w-[400px]">
-                    <div class="flex pb-6 lg:pt-5 pt-20">
-                      <div>
-                        <div v-for="order in filteredOrders" :key="order.id">
-                         <h1>Grand Total:<span class="text-blue-700 px-3"> ${{ order.total_amount }}</span></h1>
-                        </div>
-                        <router-link to="pos-order-payment">
-                          <button class="text-base leading-none px-5 py-4 mt-6 bg-blue-600 border-blue-100 border ml-[200px] text-white">
-                             Go To Payment
-                          </button>
-                        </router-link>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>  
-          </div>
-        </div>
-      </div>-->
     </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 export default {
   name: "POS",
   data() {
@@ -879,10 +810,23 @@ export default {
 
       axios.post(apiUrl, orderData)
         .then(response => {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Add To  Cart successfully processed.!',
+            icon: 'success',
+            confirmButtonText: 'OK'
+          });
           console.log('Order added successfully:', response.data);
+
         })
         .catch(error => {
           console.error('Error adding order:', error);
+          Swal.fire({
+            title: 'Error!',
+            text: 'Payment could not be processed. Please try again.',
+            icon: 'error',
+            confirmButtonText: 'OK'
+          });
         });
     },
     addToCartMore(detail) {

@@ -105,6 +105,7 @@
  
 <script>
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 export default {
 	data() {
@@ -163,13 +164,25 @@ export default {
                     'Content-Type': 'multipart/form-data'
                 }
             })
-				.then((res) => {
+				.then((res) => { 
+					Swal.fire({
+						title: 'Success!',
+						text: 'Login successfully processed. Welcome from  My System!', 
+						icon: 'success',
+						confirmButtonText: 'OK'
+					});
 					console.log(res.data);
 					this.$router.push({ name: 'product-list' });
 
 					// Handle success, e.g., redirect or show a success message
 				})
 				.catch((error) => {
+					Swal.fire({
+						title: 'Error!',
+						text: 'Login could not be processed. Please try again.',
+						icon: 'error',
+						confirmButtonText: 'OK'
+					});
 					console.error(error);
 					// Handle error, e.g., show an error message
 				});

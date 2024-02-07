@@ -28,6 +28,7 @@
 
 <script>
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 export default {
   name: 'Login',
@@ -46,12 +47,23 @@ export default {
         .then(response => {
           localStorage.setItem('token', response.data.access_token);
           localStorage.setItem('user_id', response.data.user_id);
-
+          Swal.fire({
+						title: 'Success!',
+						text: 'Login successfully processed. Welcome from  My System!', 
+						icon: 'success',
+						confirmButtonText: 'OK'
+					});
           this.routeUser(response.data.role);
         }) 
         .catch(error => {
           if (error.response && error.response.data && error.response.data.error) {
-            this.errorMessage = error.response.data.error;
+            this.errorMessage = error.response.data.error;   
+            Swal.fire({
+						title: 'Error!',
+						text: 'Login could not be processed. Please try again.',
+						icon: 'error',
+						confirmButtonText: 'OK'
+					});
           } else {
             this.errorMessage = 'Login failed. Please check your credentials.';
           }

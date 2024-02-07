@@ -49,6 +49,7 @@
 </template>
 <script>
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 export default {
   data() {
@@ -71,6 +72,7 @@ export default {
         headers: { 'Authorization': `Bearer ${token}` }
       })
       .then(response => {
+        
         this.User = response.data;
       })
       .catch(error => {
@@ -83,10 +85,22 @@ export default {
         headers: { 'Authorization': `Bearer ${token}` }
       })
       .then(response => {
+        Swal.fire({
+						title: 'Success!',
+						text: 'Login successfully processed. Welcome from  My System!', 
+						icon: 'success',
+						confirmButtonText: 'OK'
+					});
         console.log('User updated:', response.data);
         this.$router.push({ name: 'all-user' });
       })
       .catch(error => {
+        Swal.fire({
+						title: 'Error!',
+						text: 'Login could not be processed. Please try again.',
+						icon: 'error',
+						confirmButtonText: 'OK'
+					});
         console.error('Error updating user:', error);
       });
     }

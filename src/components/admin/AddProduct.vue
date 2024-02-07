@@ -75,7 +75,8 @@
   
   <script>
   import axios from 'axios';
-  
+  import Swal from 'sweetalert2';
+
   export default {
 	data() {
 	  return {
@@ -107,10 +108,22 @@
   
 		axios.post('http://127.0.0.1:8000/api/auth/products', formData)
 		  .then(response => {
+			Swal.fire({
+						title: 'Success!',
+						text: 'Add successfully processed !', 
+						icon: 'success',
+						confirmButtonText: 'OK'
+					});
 			this.$router.push({ name: 'product-list' });
 			console.log(response.data);
 		  })
 		  .catch(error => {
+			Swal.fire({
+						title: 'Error!',
+						text: 'Login could not be processed. Please try again.',
+						icon: 'error',
+						confirmButtonText: 'OK'
+					});
 			console.error('Error:', error);
 		  });
 	  },

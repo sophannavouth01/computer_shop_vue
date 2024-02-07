@@ -48,7 +48,8 @@
 											<button class=" text-md leading-3   text-red-600 ">remove</button>
 										</div>
 										<div class="py-2 px-1  mb-2  mr-6 focus:outline-none">
-											<button @click="removeItemOneOrder(order.id, detail.product_id)"  :disabled="detail.qty === 1"
+											<button @click="removeItemOneOrder(order.id, detail.product_id)"
+												:disabled="detail.qty === 1"
 												class="px-2 py-1 mx-3 bg-rose-600  text-white">-</button>
 											x {{ detail.qty }}
 											<button @click="addToCartMore(detail)"
@@ -95,7 +96,7 @@
 
 								<div class="flex items-center justify-between pt-5">
 									<p class="text-base leading-none text-gray-400"> ID:</p>
-									<input type="text" v-model="paymentData.user_id" 
+									<input type="text" v-model="paymentData.user_id"
 										class="border-b-2 border-cyan-500 bg-gray-100">
 								</div>
 								<br class=" w-full  h-[2px]">
@@ -146,11 +147,12 @@
 							<div>
 
 								<button @click="processPayment"
-									class="text-base leading-none w-full py-5   hover:bg-blue-600 bg-green-500 border-white border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">Payment <i class="fa-solid fa-receipt text-xl  text-white pl-3"></i></button>
+									class="text-base leading-none w-full py-5   hover:bg-blue-600 bg-green-500 border-white border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">Payment
+									<i class="fa-solid fa-receipt text-xl  text-white pl-3"></i></button>
 							</div>
 						</div>
 
-						
+
 					</div>
 				</div>
 			</div>
@@ -160,7 +162,8 @@
 
 <script>
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
+// cmd for install  npm install sweetalert2
 export default {
 	name: "Payment",
 	data() {
@@ -280,12 +283,11 @@ export default {
 					console.error('Error removing item from order:', error);
 				});
 		},
-		processPayment() { 
-	       if (!this.paymentData.user_id || !this.paymentData.order_id || !this.paymentData.amount) 
-		    {
-              console.error('Payment failed: user_id, order_id, and amount are required');
-               return;
-            }
+		processPayment() {
+			if (!this.paymentData.user_id || !this.paymentData.order_id || !this.paymentData.amount) {
+				console.error('Payment failed: user_id, order_id, and amount are required');
+				return;
+			}
 			axios.post('http://127.0.0.1:8000/api/auth/payments', {
 				user_id: this.paymentData.user_id,
 				order_id: this.paymentData.order_id,
@@ -298,22 +300,34 @@ export default {
 			})
 				.then(response => {
 					console.log('Payment successful:', response.data);
+					Swal.fire({
+						title: 'Success!',
+						text: 'Payment successfully processed. Thank you for coming!',
+						icon: 'success',
+						confirmButtonText: 'OK'
+					});
 					this.$router.push({ name: 'pos-order' });
 					// Handle successful payment response
 				})
 				.catch(error => {
+					Swal.fire({
+						title: 'Error!',
+						text: 'Payment could not be processed. Please try again.',
+						icon: 'error',
+						confirmButtonText: 'OK'
+					});
 					console.error('Payment failed:', error);
 					// Handle errors here
 				});
 		},
-		
+
 	},
 	mounted() {
 		this.fetchItemsFromAPI();
 		this.getOrderId();
 	},
 	computed: {
-		
+
 		filteredOrdersCart() {
 			const currentUserID = parseInt(localStorage.getItem('user_id'), 10);
 			// Filter orders by status and user_id
@@ -327,10 +341,11 @@ export default {
 
 <style>
 button[disabled] {
-  /* Style for disabled button */
-  opacity: 0.5;
-  cursor: not-allowed;
+	/* Style for disabled button */
+	opacity: 0.5;
+	cursor: not-allowed;
 }
+
 /* width */
 
 #scroll::-webkit-scrollbar {

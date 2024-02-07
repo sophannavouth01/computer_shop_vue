@@ -62,6 +62,8 @@
 </template>
 <script>
 import axios from 'axios'
+import Swal from 'sweetalert2';
+
 export default {
 	data() {
 		return {
@@ -86,10 +88,21 @@ export default {
 				
 			})
 				.then(() => {
-
+					Swal.fire({
+						title: 'Success!',
+						text: 'Create User successfully !', 
+						icon: 'success',
+						confirmButtonText: 'OK'
+					});
 					  this.$router.push('all-user');
 				}) 
 				.catch((error) => {
+					Swal.fire({
+						title: 'Error!',
+						text: 'Login could not be processed. Please try again.',
+						icon: 'error',
+						confirmButtonText: 'OK'
+					});
 					console.error(error);
 					// Handle error, e.g., show an error message to the user
 				});
