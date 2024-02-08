@@ -446,7 +446,7 @@ export default {
 			return this.products.filter(item => item.brandname === 'Asus' && item.category === 'Desktop' && item.qty > 0).slice(0, 4);
 		},
 		filteredProductsAppleAccessory() {
-			return this.products.filter(item => item.brandname === 'Apple' && item.category === 'Accessory' && item.qty > 0).slice(0, 4);
+			return this.products.filter(item => item.brandname === 'MSI' && item.category === 'Accessory' && item.qty > 0).slice(0, 4);
 		},
 
 	},

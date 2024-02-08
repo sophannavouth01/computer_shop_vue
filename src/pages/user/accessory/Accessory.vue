@@ -97,7 +97,7 @@
 		<div class=" flex mt-10 ">
 			<div class=" bg-[#343787] w-[20px] h-[40px] rounded-md"> </div>
 			<div class=" px-[16px]   font-bold  ">
-				<p class=" text-3xl text-[rgb(52,55,135)]">Dell</p>
+				<p class=" text-3xl text-[rgb(52,55,135)]">MSI </p>
 			</div>
 		</div>
 		<div class="2xl:container 2xl:mx-auto border-b-2  pt-5 pb-16  w-full">
@@ -144,7 +144,7 @@
 		<div class=" flex mt-10 ">
 			<div class=" bg-[#343787] w-[20px] h-[40px] rounded-md"> </div>
 			<div class=" px-[16px]   font-bold  ">
-				<p class=" text-3xl text-[rgb(52,55,135)]">Asus</p>
+				<p class=" text-3xl text-[rgb(52,55,135)]">DELL</p>
 			</div>
 		</div>
 		<div class="2xl:container 2xl:mx-auto border-b-2  pt-5 pb-16  w-full">
@@ -156,7 +156,7 @@
 							<div
 								class="flex justify-center items-center opacity-0 bg-gradient-to-t from-gray-800 via-gray-800 to-opacity-30 group-hover:opacity-50 absolute top-0 left-0 h-full w-full">
 							</div>
-							<img class="  h-[250px] w-full   object-cover " v-if="item.image" :src="getImageUrl(item.image)"
+							<img class="  h-[250px] w-full   object-cover  " v-if="item.image" :src="getImageUrl(item.image)"
 								alt="">
 
 							<div class="absolute bottom-0 p-8 w-full opacity-0 group-hover:opacity-100">
